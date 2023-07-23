@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	background: rgb(158, 183, 180);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	margin-top: 20px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	border-radius: 6px;
+}
+
+.inputField{
+	height: 120px;
+	background: rgb(227, 226, 226);
+	display: flex;
+	align-items: end;
+	width: 240px;
+	box-sizing: border-box;
+	border-radius: 6px 6px 0 0;
+}
+
+.inputField input {
+	width: 100%;
+	padding: 15px;
+	text-align: right;
+	border: none;
+	outline: none;
+	font-size: 2rem;
+	caret-color: transparent;
+	background: rgb(227, 226, 226);
+}
+
+.content {
+	display: flex;
+	background-color: black;
+	width: 240px;
+	box-shadow: rgba(160, 156, 156, 0.35) 0px 5px 15px;
+	border-radius: 6px;
+}
+
+.numberRow {
+	display: flex;
+	width: 100%;
+	border-radius: 0 0 0 6px;
+}
+
+.numberRow input {
+	padding: 20px;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-size: 2rem;
+}
+
+.equal {
+	background-color: rgb(46, 118, 189) !important;
+}
+
+.containEquation {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: rgb(43, 40, 40);
+	border-radius:0  0 6px 0;
+}
+
+.containEquation input {
+	flex-grow: 1;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 1rem;
+	border-bottom: 1px solid gray;
+}
+
+.containNumber {
+	width: 90%;
+}
+
+.others {
+	position: sticky;
+	height: fit-content;
+	background-color: gray;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.navBar {
+	float: right;
+	background-color: gray;
+	height: 30px;
+	width: 40px;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+}
+
+.navBar .line {
+	width: 27px;
+	height: 2px;
+	background-color: white;
+	margin: 5px;
+}
+
+.scientific {
+	right: -1px;
+	position: absolute;
+	top: 38px;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 308px;
+	background-color: rgb(39, 27, 27);
+	box-sizing: border-box;
+	display: none;
+}
+
+.costanVar {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.scientific  Input {
+	flex-grow: 1;
+	min-width: 57px;
+	font-size: 1.1rem;
+	color: white;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border: 1px solid gray;
+	transition: all 2s ease-in-out;
+}
+
+.others.active .scientific {
+	display: flex;
+}
+
+.clock {
+    color: rgb(238, 12, 31);
+    font-size: 1rem;
+    font-family: Orbitron;
+    letter-spacing: 3px;
+	background-color: rgb(73, 199, 231);
+	padding: 10px;
+	border-radius: 0 6px 6px 0;
+	font-weight: 900;
+}

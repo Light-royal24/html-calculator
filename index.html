@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+	<title>
+		Scientific Calculator using HTML, CSS and Js
+	</title>
+	<script src=
+	"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+				integrity=
+	"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+				crossorigin="anonymous"
+				referrerpolicy="no-referrer">
+		</script>
+	
+</head>
+
+<body>
+
+	
+	<div class="container">
+		<div class="inputField">
+			<input id="display" type="text">
+		</div>
+
+		<div class="others">
+			<div>
+				<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+			</div>
+			<div>
+				<div class="navBar">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+
+				<div class="scientific">
+
+					<div class="costanVar">
+				
+						<input type="button" value="cos("
+								onclick="display.value += 'cos('">
+						
+						<input type="button" value="!"
+								onclick="display.value += '!'">
+						<input type="button" value="sin("
+								onclick="display.value += 'sin('">
+					
+					</div>
+				
+					<div class="costanVar">						
+						<input type="button" value=","
+								onclick="display.value += ','">
+						<input type="button" value="tan("
+								onclick="display.value += 'tan('">
+						<input type="button" value="E"
+								onclick="e()">
+					</div>
+				
+					<div class="costanVar">
+						<input type="button" value="("
+							onclick="display.value += '('">
+						<input type="button" value="pi"
+								onclick="pi()">
+						<input type="button" value="^"
+								onclick="power()">
+					</div>
+				
+					<div class="costanVar">
+				
+						<input type="button" value="sqrt("
+								onclick="squareRoot()">
+						<input type="button" value="ln2"
+								onclick="display.value += Math.LN2">
+						<input type="button" value="log10("
+								onclick="base10Log()">
+					</div>
+				
+					<div class="costanVar">
+				
+						<input type="button" value="l2e"
+								onclick="display.value += Math.LOG2E">
+						<input type="button" value="l10e"
+								onclick="display.value += Math.LOG10E">
+						<input type="button" value="exp("
+								onclick="display.value += 'exp('">
+					</div>
+
+					<div class="costanVar">			
+						<input type="button" value=")"
+								onclick="display.value += ')'">
+						<input type="button" value="log("
+								onclick="base10Log()">
+					</div>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="content">
+		<div class="containNumber">
+			<div class="numberRow">
+				<input type="button" value="7"
+				onclick="display.value += '7'">
+				<input type="button" value="8"
+				onclick="display.value += '8'">
+				<input type="button" value="9"
+				onclick="display.value += '9'">
+			</div>
+
+			<div class="numberRow">
+				<input type="button" value="4"
+					onclick="display.value += '4'">
+				<input type="button" value="5"
+					onclick="display.value += '5'">
+				<input type="button" value="6"
+					onclick="display.value += '6'">
+			</div>
+			<div class="numberRow">
+				<input type="button" value="1"
+					onclick="display.value += '1'">
+				<input type="button" value="2"
+					onclick="display.value += '2'">
+				<input type="button" value="3"
+					onclick="display.value += '3'">
+			</div>
+			<div class="numberRow">
+				<input type="button" value="0"
+					onclick="display.value += '0'">
+				<input type="button" value="."
+					onclick="display.value += '.'">
+				<input type="button" value="="
+					onclick="calculate()" class="equal">
+			</div>
+		</div>
+
+		<div class="containEquation">
+			<input type="button" value="⌫"
+				onclick="backspace()">
+			<input type="button" value="C"
+				onclick="display.value = ''">
+			<input type="button" value="/"
+				onclick="display.value += '/'">
+			<input type="button" value="x"
+				onclick="display.value += '*'">
+			<input type="button" value="-"
+				onclick="display.value += '-'">
+			<input type="button" value="+"
+				onclick="display.value += '+'">
+			<input type="button" value="%"
+				onclick="display.value += '%'">
+		</div>
+	</div>
+
+</div>
+	
+<script src="script.js"></script>
+</body>
+</html>
